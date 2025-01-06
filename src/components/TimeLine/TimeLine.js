@@ -3,12 +3,14 @@ import React, { useState, useRef, useEffect } from 'react';
 import { CarouselButton, CarouselButtonDot, CarouselButtons, CarouselContainer, CarouselItem, CarouselItemImg, CarouselItemText, CarouselItemTitle, CarouselMobileScrollNode } from './TimeLineStyles';
 import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import { TimeLineData } from '../../constants/constants';
+import useTranslation from "next-translate/useTranslation";
 
 const TOTAL_CAROUSEL_COUNT = TimeLineData.length;
 
 const Timeline = () => {
   const [activeItem, setActiveItem] = useState(0);
   const carouselRef = useRef();
+  let { t, lang } = useTranslation();
 
   const scroll = (node, left) => {
     return node.scrollTo({ left, behavior: 'smooth' });
@@ -44,13 +46,11 @@ const Timeline = () => {
 
   return (
     <Section>
-      <SectionTitle>A Propos</SectionTitle>
-      <SectionText>
-        The purpose of Javascript Mastery is to help aspiring developers to take their development skills to the next level and build awesome apps.
-      </SectionText>
+      <SectionTitle>{t("common:timeline.about")}</SectionTitle>
+      <SectionText>{t("common:timeline.description")}</SectionText>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         <>
-        {TimeLineData.map(({text, year}, index) => (
+        {TimeLineData.map(({text_fr, text_en, year}, index) => (
           <CarouselMobileScrollNode key={index} final={index === TOTAL_CAROUSEL_COUNT -1}>
             <CarouselItem
               index={index}
@@ -91,7 +91,7 @@ const Timeline = () => {
                   </defs>
                 </CarouselItemImg>
               </CarouselItemTitle>
-              <CarouselItemText>{text}</CarouselItemText>
+              <CarouselItemText>{lang === 'en' ? text_en : text_fr }</CarouselItemText>
             </CarouselItem>
           </CarouselMobileScrollNode>
         ))}

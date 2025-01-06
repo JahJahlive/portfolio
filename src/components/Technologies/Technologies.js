@@ -2,15 +2,18 @@ import React from 'react';
 import { DiFirebase, DiReact, DiZend } from 'react-icons/di';
 import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import { List, ListContainer, ListItem, ListParagraph, ListTitle } from './TechnologiesStyles';
+import useTranslation from "next-translate/useTranslation";
 
-const Technologies = () =>  (
+const Technologies = () => {
+  let { t } = useTranslation();
+  
+  return (
  <Section nopadding id="technologies">
     <SectionDivider/>
     <br />
     <SectionTitle>Technologies</SectionTitle>
     <SectionText>
-      I've worked with a range a technologies in the web development world.
-      From back-end To Design
+      {t("common:technologie.details")}
     </SectionText>
     <List>
       <ListItem>
@@ -18,7 +21,7 @@ const Technologies = () =>  (
         <ListContainer>
           <ListTitle>Front-End</ListTitle>
           <ListParagraph>
-            Experience with <br />
+            Experience {t("common:technologie.with")} <br />
             React.js
           </ListParagraph>
         </ListContainer>
@@ -28,13 +31,13 @@ const Technologies = () =>  (
         <ListContainer>
           <ListTitle>Back-End</ListTitle>
           <ListParagraph>
-            Experience with <br />
+            Experience {t("common:technologie.with")} <br />
             Laravel
           </ListParagraph>
         </ListContainer>
       </ListItem>
     </List>
   </Section>
-);
+)};
 
 export default Technologies;

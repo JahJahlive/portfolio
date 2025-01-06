@@ -1,0 +1,21 @@
+{
+    "projets": "Projects",
+    "technologies": "Technologies",
+    "a_propos": "About",
+    "hero": {
+        "welcome" : "Welcome to my",
+        "description": "My name is Yannick Kobe Mbaikwo, Full Stack developer specialized in creating intelligent web solutions using Laravel / React / VueJs / NextJS / Wordpress since 2015.",
+        "savoir_plus": "Learn more..."
+    },
+    "technologie": {
+        "details" : "I've worked with a range a technologies in the web development world. From back-end To Design",
+         "with": "with"
+    },
+    "timeline": {
+        "about" : "About",
+        "description": "The purpose of Javascript Mastery is to help aspiring developers to take their development skills to the next level and build awesome apps."
+    },
+    "footer": {
+        "slogan": "The purpose of Javascript Mastery is to help aspiring developers to take their development skills to the next level and build awesome apps."
+    }
+}

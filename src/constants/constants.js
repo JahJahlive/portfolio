@@ -1,16 +1,18 @@
 export const projects = [
   {
     title: 'MERN Memories',
-    description: "Using React, Node.js, Express & MongoDB you'll learn how to build a Full Stack MERN Application - from start to finish. The App is called Memories and it is a simple social media app that allows users to post interesting events that happened in their lives.",
-      image: '/images/1.png',
-      tags: ['Mongo', 'Express', 'React', 'Node'],
+    description_en: "Using React, Node.js, Express & MongoDB you'll learn how to build a Full Stack MERN Application - from start to finish. The App is called Memories and it is a simple social media app that allows users to post interesting events that happened in their lives.",
+    description_fr: "En utilisant React, Node.js, Express et MongoDB, vous apprendrez à créer une application MERN Full Stack, du début à la fin. L'application s'appelle Memories et il s'agit d'une simple application de médias sociaux qui permet aux utilisateurs de publier des événements intéressants survenus dans leur vie.",
+    image: '/images/1.png',
+    tags: ['Mongo', 'Express', 'React', 'Node'],
     source: 'https://google.com',
     visit: 'https://google.com',
     id: 0,
   },
   {
     title: 'E-Commerce',
-    description:"While building it you're going to learn many advanced React & JavaScript topics, as well as how to use Stripe for card transactions. On top of that, at the end of the video, you will have this unique and complex webshop app that you will be able to add to your portfolio. And trust me, e-commerce applications are impressive.",
+    description_en:"While building it you're going to learn many advanced React & JavaScript topics, as well as how to use Stripe for card transactions. On top of that, at the end of the video, you will have this unique and complex webshop app that you will be able to add to your portfolio. And trust me, e-commerce applications are impressive.",
+    description_fr: "En le construisant, vous allez apprendre de nombreux sujets avancés sur React et JavaScript, ainsi que comment utiliser Stripe pour les transactions par carte. De plus, à la fin de la vidéo, vous disposerez de cette application de boutique en ligne unique et complexe que vous pourrez ajouter à votre portfolio. Et croyez-moi, les applications de commerce électronique sont impressionnantes.",
     image: '/images/2.png',
     tags: ['React', 'JavaScript'],
     source: 'https://google.com',
@@ -19,16 +21,18 @@ export const projects = [
   },
   {
     title: 'WebRTC App',
-    description: "This is a code repository for the corresponding YouTube video. In this tutorial, we're going to build and deploy a React Video Chat Application using WebRTC.",
-      image: '/images/3.jpg',
-      tags: ['React', 'WebRTC'],
+    description_en: "This is a code repository for the corresponding YouTube video. In this tutorial, we're going to build and deploy a React Video Chat Application using WebRTC.",
+    description_fr: "Il s'agit d'un référentiel de code pour la vidéo YouTube correspondante. Dans ce didacticiel, nous allons créer et déployer une application de chat vidéo React à l'aide de WebRTC.",
+    image: '/images/3.jpg',
+    tags: ['React', 'WebRTC'],
     source: 'https://google.com',
     visit: 'https://google.com',
     id: 2,
   },
   {
     title: 'Unichat',
-    description: "This is a code repository for the corresponding video tutorial. In this video, we will create a full Realtime Chat Application",
+    description_en: "This is a code repository for the corresponding video tutorial. In this video, we will create a full Realtime Chat Application",
+    description_fr: "Il s'agit d'un référentiel de code pour le didacticiel vidéo correspondant. Dans cette vidéo, nous allons créer une application complète de chat en temps réel",
     image: '/images/4.jpg',
     tags: ['React', 'ChatEngine', 'Firebase'],
     source: 'https://google.com',
@@ -38,9 +42,9 @@ export const projects = [
 ];
 
 export const TimeLineData = [
-  { year: 2017, text: 'Started my journey', },
-  { year: 2018, text: 'Worked as a freelance developer', },
-  { year: 2019, text: 'Founded JavaScript Mastery', },
-  { year: 2020, text: 'Shared my projects with the world', },
-  { year: 2021, text: 'Started my own platform', },
+  { year: 2017, text_fr: "J'ai commencé mon voyage", text_en: 'Started my journey', },
+  { year: 2018, text_fr: "Travail en tant que développeur indépendant", text_en: 'Worked as a freelance developer', },
+  { year: 2019, text_fr: "Creation JavaScript Mastery", text_en: 'Founded JavaScript Mastery', },
+  { year: 2020, text_fr: "J'ai partagé mes projets avec le monde", text_en: 'Shared my projects with the world', },
+  { year: 2021, text_fr: "J'ai lancé ma propre plateforme", text_en: 'Started my own platform', },
 ];

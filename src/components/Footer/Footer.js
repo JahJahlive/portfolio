@@ -3,8 +3,12 @@ import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
 
 import { SocialIcons } from '../Header/HeaderStyles';
 import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTitle, Slogan, SocialContainer, SocialIconsContainer } from './FooterStyles';
+0
+import useTranslation from "next-translate/useTranslation";
 
 const Footer = () => {
+  let { t } = useTranslation();
+
   return (
     <FooterWrapper>
       <LinkList>
@@ -19,7 +23,7 @@ const Footer = () => {
       </LinkList>
       <SocialIconsContainer>
         <CompanyContainer>
-          <Slogan>Innovation one project at a time</Slogan>
+          <Slogan>{t("common:footer.slogan")}</Slogan>
         </CompanyContainer>
         <SocialContainer>
           <SocialIcons href='https://github.com/jahjahlive'>

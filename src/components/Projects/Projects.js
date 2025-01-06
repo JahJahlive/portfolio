@@ -1,24 +1,27 @@
-import React from 'react';
-
+import React, { useEffect } from 'react';
 import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag, TagList, TitleContent, UtilityList, Img } from './ProjectsStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { projects } from '../../constants/constants';
+import useTranslation from "next-translate/useTranslation";
 
-const Projects = () => (
+const Projects = () => {
+  let { t, lang } = useTranslation();
+
+  return (
   <Section nopadding id="projects">
     <SectionDivider/>
-    <SectionTitle main>Projets</SectionTitle>
+    <SectionTitle main>{t("common:projets")}</SectionTitle>
     <GridContainer>
       {
         projects.map(
-          ({id, description, image, source, tags, title, visit}) => (
+          ({id, description_en, description_fr, image, source, tags, title, visit}) => (
           <BlogCard>
             <Img src={image} />
             <TitleContent>
               <HeaderThree title={title}></HeaderThree>
               <Hr />
             </TitleContent>
-            <CardInfo>{description}</CardInfo>
+            <CardInfo>{lang === 'en' ? description_en : description_fr}</CardInfo>
             <div>
               <TitleContent>Stack</TitleContent>
               <TagList>
@@ -37,6 +40,6 @@ const Projects = () => (
       }
     </GridContainer>
   </Section>
-);
+)};
 
 export default Projects;

@@ -1,24 +1,25 @@
 import React from 'react';
-
 import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import Button from '../../styles/GlobalComponents/Button';
 import { LeftSection } from './HeroStyles';
+import useTranslation from "next-translate/useTranslation";
 
-const Hero = (props) => (
+const Hero = (props) => {
+  let { t } = useTranslation();
+
+  return (
   <Section row nopadding>
     <LeftSection>
       <SectionTitle main center>
-        Bienvenue sur<br />
-        Mon Portfolio
+       <span>{t("common:hero.welcome")} <br /> Portfolio</span> 
       </SectionTitle>
       <SectionText>
-      Je m'appelle Yannick Kobe Mbaikwo, développeur Full Stack spécialisé dans la réalisation 
-      de solutions web intelligente sous Laravel / React / VueJs / NextJS / Wordpress 
-      depuis 2015.
+      {t("common:hero.description")}
       </SectionText>
-      <Button onClick={() => window.location = 'https://www.google.com'} >En savoir plus...</Button>
+      <Button onClick={() => window.location = 'https://www.google.com'} >
+      {t("common:hero.savoir_plus")}</Button>
     </LeftSection>
   </Section>
-);
+)};
 
 export default Hero;
